@@ -1,0 +1,32 @@
+# Ignore sample data
+samples/
+
+# Ignore large genomic files
+*.bam
+*.bam.bai
+*.vcf
+*.vcf.gz
+*.fa
+*.fasta
+*.str
+*.fai
+
+# Keep results but ignore large output files
+results/*.bam
+results/*.vcf.gz
+
+# Large reference files
+strs_call/hg38.fa
+strs_call/hg38.fa.*
+gtf_annot/*.gtf
+gtf_annot/Homo_sapiens*.gtf
+
+# Large data files
+ancestry/EthSEQ_Results_3D/*.gds
+desc_analysis/results/*.csv
+
+# Keep only summary files
+!desc_analysis/results/stats_*.csv
+!desc_analysis/results/strs_by_gene_combo.csv
+!desc_analysis/results/strs_by_region_combo.csv
+!desc_analysis/results/strs_by_repeatunit_combo.csv
